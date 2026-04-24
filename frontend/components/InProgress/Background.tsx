@@ -18,8 +18,9 @@ export default function Background() {
                 src={isMobile ? "/InProgressMobile.gif" : "/InProgress.gif"}
                 fill={true}
                 alt="Guatoncito working"
-                className="-z-10 object-cover object-center w-auto h-auto"
+                className="-z-10 object-cover object-center w-auto h-auto "
             />
+            <div className="absolute w-full h-full -z-5 bg-radial from-transparent  to-middle from-50%  to-85%  opacity-65  " />
         </>
     );
 }

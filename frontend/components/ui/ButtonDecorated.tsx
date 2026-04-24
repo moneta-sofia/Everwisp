@@ -8,7 +8,7 @@ type Props = {
 };
 export default function ButtonDecorated({ buttonText, link}: Props) {
     return (
-        <Link className="relative font-spirax text-3xl font-medium shadow-goldaura-inset shadow-goldaura btn-magic pointer-events-auto"
+        <Link className="relative mb-10 font-spirax text-3xl font-medium shadow-goldaura-inset shadow-goldaura btn-magic pointer-events-auto"
         href={link}
         >
             <Image

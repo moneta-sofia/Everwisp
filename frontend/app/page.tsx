@@ -6,15 +6,15 @@ export default function Home() {
 
 
   return (
-    <div className="relative flex pt-8 pb-3 flex-col flex-1 items-center justify-between">
+    <div className="relative flex flex-col flex-1 items-center justify-between">
       
       <Background/>
-      <div>
-        <h1 className="text-full-shadow mb-5">Page in progress </h1>
-        <h2> Help us to improve our page and community!</h2>
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-full-shadow  pt-8 ">Everwisp</h1>
+        <h2> Coming soon… A community where creators and players connect, interact, and grow together </h2>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <ButtonDecorated buttonText="Donate Us" link="https://paypal.me/Everwisp"/>
+        <ButtonDecorated buttonText="Support us" link="https://paypal.me/Everwisp"/>
         <StarsSocials/> 
       </div>
     </div>

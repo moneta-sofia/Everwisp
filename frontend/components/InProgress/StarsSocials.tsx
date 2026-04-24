@@ -21,7 +21,7 @@ export default function StarsSocials() {
     <>
       {isMobile ? (
         <>
-          <div className="flex w-full mt-10 justify-center items-center">
+          <div className="flex w-full justify-center items-center">
             {socials.map((s, i) => (
               <a
                 key={i}
