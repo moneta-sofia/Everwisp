@@ -14,7 +14,7 @@ export default function Home() {
         <h2> Help us to improve our page and community!</h2>
       </div>
       <div className="flex flex-col justify-center items-center">
-        <ButtonDecorated buttonText="Donate Us"/>
+        <ButtonDecorated buttonText="Donate Us" link="https://paypal.me/Everwisp"/>
         <StarsSocials/> 
       </div>
     </div>

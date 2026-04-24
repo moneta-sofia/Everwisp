@@ -14,6 +14,7 @@ export default function Background() {
     return (
         <>
             <Image
+                unoptimized 
                 src={isMobile ? "/InProgressMobile.gif" : "/InProgress.gif"}
                 fill={true}
                 alt="Guatoncito working"
