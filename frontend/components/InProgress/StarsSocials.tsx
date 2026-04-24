@@ -21,20 +21,20 @@ export default function StarsSocials() {
     <>
       {isMobile ? (
         <>
-          <div className="flex w-full mt-10">
+          <div className="flex w-full mt-10 justify-center items-center">
             {socials.map((s, i) => (
               <a
                 key={i}
                 href={s.href}
                 target="_blank"
-                className={`h-24 w-24 hover:scale-125 transition-transform duration-300`}
+                className={`h-18 w-18 hover:scale-125 transition-transform duration-300`}
                 style={{
                   animation: `float 3s ease-in-out infinite`,
                   animationDelay: `${i * 0.4}s`,
                 }}
               >
                 <Image src={star} alt="star" fill className="object-contain" />
-                <div className="absolute inset-0 flex items-center justify-center w-auto h-auto">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   {s.icon}
                 </div>
               </a>

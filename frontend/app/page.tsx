@@ -6,7 +6,7 @@ export default function Home() {
 
 
   return (
-    <div className="relative flex p-8 flex-col flex-1 items-center justify-between">
+    <div className="relative flex pt-8 pb-3 flex-col flex-1 items-center justify-between">
       
       <Background/>
       <div>
