@@ -11,7 +11,7 @@ export default function Home() {
       <Background/>
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-full-shadow  pt-8 ">Everwisp</h1>
-        <h2> Coming soon… A community where creators and players connect, interact, and grow together </h2>
+        <h2 className="text-full-ilumination p-3"> Coming soon… A community where creators and players connect, interact, and grow together </h2>
       </div>
       <div className="flex flex-col justify-center items-center">
         <ButtonDecorated buttonText="Support us" link="https://paypal.me/Everwisp"/>

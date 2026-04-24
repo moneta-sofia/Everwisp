@@ -31,6 +31,10 @@ h3{
   text-shadow:0px 0px 10px rgb(0, 0, 0) ;
 }
 
+.text-full-ilumination{
+  text-shadow:0px 0px 10px rgb(255, 255, 255) ;
+}
+
 @layer components {
   .btn-magic {
     background-color: var(--color-container);
