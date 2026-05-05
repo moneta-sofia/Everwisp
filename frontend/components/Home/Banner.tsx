@@ -62,11 +62,10 @@ export default function Banner() {
 
         if (difference > 50) {
             nextSlide();
-            resetTimer();
         } else if (difference < -50) {
             prevSlide();
-            resetTimer();
         }
+        resetTimer();
         setDragStart(null);
         setDragging(false);
     };
@@ -84,38 +83,38 @@ export default function Banner() {
                 </div>
                 {/* --------------------------------- Sliders -------------------------------- */}
                 <div
-                    key={currentSlide}
                     onPointerDown={handlePointerDown}
                     onPointerUp={handlePointerUp}
+                    onPointerCancel={handlePointerLeave}
                     onPointerLeave={handlePointerLeave}
-                    className={`w-full h-full flex justify-center items-center bg-yellow-300 z-10 transition-all select-none ${dragging ? "cursor-grabbing" : "cursor-grab"
+                    className={`w-full h-full flex justify-center items-center bg-yellow-300 z-10 transition-all select-none touch-pan-y ${dragging ? "cursor-grabbing" : "cursor-grab"
                         }`}
                 >
-                    {slides[currentSlide]}
-                </div>
-
-                {/* ------------------------- Arrows Buttons Sliders ------------------------- */}
-                <button onClick={prevSlide} className="cursor-pointer absolute p-3 top-1/2 -translate-y-1/2">
-                    <IoIosArrowBack className="shadow-goldaura" />
-                </button>
-                <button onClick={nextSlide} className="cursor-pointer absolute p-3 right-0 top-1/2 -translate-y-1/2">
-                    <IoIosArrowForward className="shadow-goldaura" />
-                </button>
-
-                {/* -------------------------- Dots Buttons Sliders -------------------------- */}
-                <div className="flex justify-center items-center absolute botom bottom-2 left-1/2 -translate-x-1/2">
-                    {slides.map((_, index) => (
-                        <button
-                            key={index}
-                            type="button"
-                            onClick={() => goToSlide(index)}
-                            aria-label={`Ir al slide ${index + 1}`}
-                            className={`h-2.5 w-2.5 m-2 rounded-full transition-all ${currentSlide === index ? "bg-white scale-125 shadow-goldaura" : "bg-stone-400/40 cursor-pointer"
-                                }`}
-                        />
-                    ))}
-                </div>
+                {slides[currentSlide]}
             </div>
+
+            {/* ------------------------- Arrows Buttons Sliders ------------------------- */}
+            <button onClick={prevSlide} className="cursor-pointer absolute p-3 top-1/2 -translate-y-1/2">
+                <IoIosArrowBack className="shadow-goldaura" />
+            </button>
+            <button onClick={nextSlide} className="cursor-pointer absolute p-3 right-0 top-1/2 -translate-y-1/2">
+                <IoIosArrowForward className="shadow-goldaura" />
+            </button>
+
+            {/* -------------------------- Dots Buttons Sliders -------------------------- */}
+            <div className="flex justify-center items-center absolute botom bottom-2 left-1/2 -translate-x-1/2">
+                {slides.map((_, index) => (
+                    <button
+                        key={index}
+                        type="button"
+                        onClick={() => goToSlide(index)}
+                        aria-label={`Ir al slide ${index + 1}`}
+                        className={`h-2.5 w-2.5 m-2 rounded-full transition-all ${currentSlide === index ? "bg-white scale-125 shadow-goldaura" : "bg-stone-400/40 cursor-pointer"
+                            }`}
+                    />
+                ))}
+            </div>
+        </div >
         </>
     );
 }
