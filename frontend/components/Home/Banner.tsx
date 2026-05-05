@@ -12,10 +12,11 @@ export default function Banner() {
     const [dragging, setDragging] = useState(false);
     const [timerKey, setTimerKey] = useState(0);
 
+
+    {/* ---------------------------------- Timer --------------------------------- */ }
     const resetTimer = () => {
         setTimerKey((prev) => prev + 1);
     };
-
 
     useEffect(() => {
         if (!banner) return;
@@ -27,6 +28,8 @@ export default function Banner() {
         return () => clearInterval(interval);
     }, [banner, slidesLength, timerKey]);
 
+    {/* --------------------- funct for button arrow sliders --------------------- */ }
+
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % slidesLength);
         resetTimer();
@@ -36,15 +39,19 @@ export default function Banner() {
         setCurrentSlide((prev) => (prev - 1 + slidesLength) % slidesLength);
         resetTimer();
     };
-    const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-        setDragStart(e.clientX);
-        setDragging(true);
-    };
 
+    /* ------------------------ funct for button dots sliders ------------------------ */
 
     const goToSlide = (index: number) => {
         setCurrentSlide(index);
         resetTimer();
+    };
+
+    /* ------------------------- funct for drag slidders ------------------------ */
+
+    const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+        setDragStart(e.clientX);
+        setDragging(true);
     };
 
     const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
@@ -72,7 +79,10 @@ export default function Banner() {
     return (
         <>
             <div className=" bg-red-600 w-full h-[90vh] justify-center items-center relative">
-{/* --------------------------------- Sliders -------------------------------- */}
+                <div className="absolute -bottom-2 left-0 w-full h-26 overflow-hidden pointer-events-none">
+                    <div className="absolute -left-4 -right-4 bottom-0 h-full bg-linear-to-t from-background from-5% to-90% to-transparent blur-xs" />
+                </div>
+                {/* --------------------------------- Sliders -------------------------------- */}
                 <div
                     key={currentSlide}
                     onPointerDown={handlePointerDown}
@@ -84,23 +94,23 @@ export default function Banner() {
                     {slides[currentSlide]}
                 </div>
 
-{/* ------------------------- Arrows Buttons Sliders ------------------------- */}
+                {/* ------------------------- Arrows Buttons Sliders ------------------------- */}
                 <button onClick={prevSlide} className="cursor-pointer absolute p-3 top-1/2 -translate-y-1/2">
-                    <IoIosArrowBack />
+                    <IoIosArrowBack className="shadow-goldaura" />
                 </button>
                 <button onClick={nextSlide} className="cursor-pointer absolute p-3 right-0 top-1/2 -translate-y-1/2">
-                    <IoIosArrowForward />
+                    <IoIosArrowForward className="shadow-goldaura" />
                 </button>
 
-{/* -------------------------- Dots Buttons Sliders -------------------------- */}
-                <div className="flex justify-center items-center absolute botom bottom-3 left-1/2 -translate-x-1/2">
+                {/* -------------------------- Dots Buttons Sliders -------------------------- */}
+                <div className="flex justify-center items-center absolute botom bottom-2 left-1/2 -translate-x-1/2">
                     {slides.map((_, index) => (
                         <button
                             key={index}
                             type="button"
                             onClick={() => goToSlide(index)}
                             aria-label={`Ir al slide ${index + 1}`}
-                            className={`h-2.5 w-2.5 m-2 rounded-full transition-all ${currentSlide === index ? "bg-white scale-125" : "bg-stone-400/40 cursor-pointer"
+                            className={`h-2.5 w-2.5 m-2 rounded-full transition-all ${currentSlide === index ? "bg-white scale-125 shadow-goldaura" : "bg-stone-400/40 cursor-pointer"
                                 }`}
                         />
                     ))}
