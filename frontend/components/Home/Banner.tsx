@@ -10,11 +10,11 @@ export default function Banner() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [dragStart, setDragStart] = useState<number | null>(null);
     const [dragging, setDragging] = useState(false);
- const [timerKey, setTimerKey] = useState(0);
+    const [timerKey, setTimerKey] = useState(0);
 
-   const resetTimer = () => {
-    setTimerKey((prev) => prev + 1);
-  };
+    const resetTimer = () => {
+        setTimerKey((prev) => prev + 1);
+    };
 
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function Banner() {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, [banner, slidesLength]);
+    }, [banner, slidesLength, timerKey]);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % slidesLength);
@@ -42,10 +42,10 @@ export default function Banner() {
     };
 
 
-      const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    resetTimer();
-  };
+    const goToSlide = (index: number) => {
+        setCurrentSlide(index);
+        resetTimer();
+    };
 
     const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
         if (dragStart === null) return;
@@ -53,13 +53,13 @@ export default function Banner() {
         const dragEnd = e.clientX;
         const difference = dragStart - dragEnd;
 
-    if (difference > 50) {
-      nextSlide();
-    } else if (difference < -50) {
-      prevSlide();
-    } else {
-      resetTimer();
-    }
+        if (difference > 50) {
+            nextSlide();
+            resetTimer();
+        } else if (difference < -50) {
+            prevSlide();
+            resetTimer();
+        }
         setDragStart(null);
         setDragging(false);
     };
@@ -71,31 +71,34 @@ export default function Banner() {
 
     return (
         <>
-            <div className=" bg-red-600 w-full flex- justify-center items-center relative">
+            <div className=" bg-red-600 w-full h-[90vh] justify-center items-center relative">
+{/* --------------------------------- Sliders -------------------------------- */}
                 <div
                     key={currentSlide}
                     onPointerDown={handlePointerDown}
                     onPointerUp={handlePointerUp}
                     onPointerLeave={handlePointerLeave}
-                    className={`w-full h-40 flex justify-center items-center bg-yellow-300 z-10 transition-all select-none ${dragging ? "cursor-grabbing" : "cursor-grab"
+                    className={`w-full h-full flex justify-center items-center bg-yellow-300 z-10 transition-all select-none ${dragging ? "cursor-grabbing" : "cursor-grab"
                         }`}
                 >
                     {slides[currentSlide]}
                 </div>
 
-                    <button onClick={prevSlide} className="cursor-pointer absolute p-3 top-1/2 -translate-y-1/2">
-                        <IoIosArrowBack />
-                    </button>
-                    <button onClick={nextSlide} className="cursor-pointer absolute p-3 right-0 top-1/2 -translate-y-1/2">
-                        <IoIosArrowForward />
-                    </button>
+{/* ------------------------- Arrows Buttons Sliders ------------------------- */}
+                <button onClick={prevSlide} className="cursor-pointer absolute p-3 top-1/2 -translate-y-1/2">
+                    <IoIosArrowBack />
+                </button>
+                <button onClick={nextSlide} className="cursor-pointer absolute p-3 right-0 top-1/2 -translate-y-1/2">
+                    <IoIosArrowForward />
+                </button>
 
+{/* -------------------------- Dots Buttons Sliders -------------------------- */}
                 <div className="flex justify-center items-center absolute botom bottom-3 left-1/2 -translate-x-1/2">
                     {slides.map((_, index) => (
                         <button
                             key={index}
                             type="button"
-                            onClick={() =>goToSlide(index)}
+                            onClick={() => goToSlide(index)}
                             aria-label={`Ir al slide ${index + 1}`}
                             className={`h-2.5 w-2.5 m-2 rounded-full transition-all ${currentSlide === index ? "bg-white scale-125" : "bg-stone-400/40 cursor-pointer"
                                 }`}
