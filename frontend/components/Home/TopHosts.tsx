@@ -1,5 +1,6 @@
 import { topHostsMock } from "@/data/porfiles/TopHosts.Mockup";
 import Image from "next/image";
+import DecoratedFrame from "@/components/ui/DecoratedFrame";
 
 const rankStyles = [
   {
@@ -38,8 +39,9 @@ export default function TopHosts() {
       <div className="flex justify-center md:flex-row flex-col items-center w-full border-amber-300 border-2">
         {topHostsMock.map((host, i) => {
           return (
-            <div
+            <DecoratedFrame
               key={i}
+                color={i === 0 ? "gold" : i === 1 ? "silver" : "bronze"}
               className={` ${rankStyles[i].card} flex flex-col md:my-20 my-10 mx-10 justify-between items-center bg-container border-[0.5px] m-5 border-amber-200 btn-magic relative text-center`}
             >
               <Image
@@ -57,11 +59,11 @@ export default function TopHosts() {
               </p>
               <div>
                 <Image src={"/Line.svg"} alt="" width={400} height={10}/>
-                <p className={` ${rankStyles[i].hours} font-chivo font-light pt-3 `}>
+                <p className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}>
                   {host.stats.hoursStream} HOURS
                 </p>
               </div>
-            </div>
+            </DecoratedFrame>
           );
         })}
       </div>
