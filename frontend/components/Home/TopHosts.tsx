@@ -37,7 +37,7 @@ const rankStyles = [
 export default function TopHosts() {
   return (
     <section className="flex justify-center items-center flex-col bg-background md:h-screen h-auto py-18 text-full-ilumination w-full">
-      <div className="flex justify-between items-center  mb-12 w-10/12 container">
+      <div className="flex justify-between items-center my-12 w-10/12 container">
         <div className="w-2/3 rotate-180 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
           <div className="aguja w-full" />
         </div>
