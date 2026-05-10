@@ -87,14 +87,14 @@ export default function DecoratedFrame({
                 alt=""
             width={1500}
                 height={1500}
-                className={`absolute -bottom-5 rotate-180 pointer-events-none ${style.filter}`}
+                className={`absolute md:-bottom-5 -bottom-9  rotate-180 pointer-events-none ${style.filter}`}
             /> 
              <Image
                 src={glitter}
                 alt=""
             width={1500}
                 height={1500}
-                className={`absolute -top-5 pointer-events-none ${style.filter}`}
+                className={`absolute md:-top-5 -top-9 pointer-events-none ${style.filter}`}
             /> 
             {children}
         </div>

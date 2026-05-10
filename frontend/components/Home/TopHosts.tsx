@@ -1,6 +1,7 @@
 import { topHostsMock } from "@/data/porfiles/TopHosts.Mockup";
 import Image from "next/image";
 import DecoratedFrame from "@/components/ui/DecoratedFrame";
+import RankBadge from "@/components/ui/RankBadge";
 
 const rankStyles = [
   {
@@ -44,6 +45,7 @@ export default function TopHosts() {
                 color={i === 0 ? "gold" : i === 1 ? "silver" : "bronze"}
               className={` ${rankStyles[i].card} flex flex-col md:my-20 my-10 mx-10 justify-between items-center bg-container border-[0.5px] m-5 border-amber-200 btn-magic relative text-center`}
             >
+              <RankBadge rank={(i + 1) as 1 | 2 | 3} />
               <Image
                 src={"/test/porfilePicture.webp"}
                 alt="asd"
