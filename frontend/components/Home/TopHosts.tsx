@@ -2,6 +2,7 @@ import { topHostsMock } from "@/data/porfiles/TopHosts.Mockup";
 import Image from "next/image";
 import DecoratedFrame from "@/components/ui/DecoratedFrame";
 import RankBadge from "@/components/ui/RankBadge";
+import { star } from "@/utils/frame";
 
 const rankStyles = [
   {
@@ -35,15 +36,25 @@ const rankStyles = [
 
 export default function TopHosts() {
   return (
-    <section className="bg-background md:h-screen h-auto py-18 text-full-ilumination w-full">
-      <h1>TOP HOST</h1>
-      <div className="flex justify-center md:flex-row flex-col items-center w-full border-amber-300 border-2">
+    <section className="flex justify-center items-center flex-col bg-background md:h-screen h-auto py-18 text-full-ilumination w-full">
+      <div className="flex justify-between items-center  mb-12 w-10/12 container">
+        <div className="w-2/3 rotate-180 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
+          <div className="aguja w-full" />
+        </div>
+        <Image src={star} width={50} height={50} alt="star" className="mx-10 md:flex hidden" />
+        <h1 className="w-full">TOP HOST</h1>
+        <Image src={star} width={50} height={50} alt="star" className="mx-10  md:flex hidden" />
+        <div className="w-2/3 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
+          <div className="aguja w-full" />
+        </div>
+      </div>
+      <div className="flex justify-center md:flex-row flex-col items-center w-full">
         {topHostsMock.map((host, i) => {
           return (
             <DecoratedFrame
               key={i}
-                color={i === 0 ? "gold" : i === 1 ? "silver" : "bronze"}
-              className={` ${rankStyles[i].card} flex flex-col md:my-20 my-10 mx-10 justify-between items-center bg-container border-[0.5px] m-5 border-amber-200 btn-magic relative text-center`}
+              color={i === 0 ? "gold" : i === 1 ? "silver" : "bronze"}
+              className={` ${rankStyles[i].card} flex flex-col md:my-20 my-16 mx-10 justify-between items-center bg-container border-[0.5px] m-5 border-amber-200 btn-magic relative text-center`}
             >
               <RankBadge rank={(i + 1) as 1 | 2 | 3} />
               <Image
@@ -60,8 +71,10 @@ export default function TopHosts() {
                 {host.presentation.shortDescription}
               </p>
               <div>
-                <Image src={"/Line.svg"} alt="" width={400} height={10}/>
-                <p className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}>
+                <Image src={"/Line.svg"} alt="" width={400} height={10} />
+                <p
+                  className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}
+                >
                   {host.stats.hoursStream} HOURS
                 </p>
               </div>
