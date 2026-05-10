@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { tl, tr, bl, br, star } from "@/utils/frame";
+import { tl, tr, bl, br } from "@/utils/frame";
 import Link from "next/link";
 
 type Props = { 
