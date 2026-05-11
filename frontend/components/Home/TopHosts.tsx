@@ -64,19 +64,11 @@ export default function TopHosts() {
                 height={rankStyles[i].imageH}
                 className="relative -mt-10"
               />
-              <p className={` ${rankStyles[i].title} font-Laila font-semibold`}>
-                {host.userData.name}
-              </p>
-              <p className={` ${rankStyles[i].description}`}>
-                {host.presentation.shortDescription}
-              </p>
+              <p className={` ${rankStyles[i].title} font-Laila font-semibold`}>{host.userData.name}</p>
+              <p className={` ${rankStyles[i].description}`}>{host.presentation.shortDescription}</p>
               <div>
                 <Image src={"/Line.svg"} alt="" width={400} height={10} />
-                <p
-                  className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}
-                >
-                  {host.stats.hoursStream} HOURS
-                </p>
+                <p className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}>{host.stats.hoursStream} HOURS</p>
               </div>
             </DecoratedFrame>
           );

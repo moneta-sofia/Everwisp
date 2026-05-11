@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Spirax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
 
-
-h1{
+h1 {
   font-family: "Spirax";
   text-align: center;
-  color:var(--color-neutral);
+  color: var(--color-neutral);
   font-size: 4rem;
   line-height: 1;
 }
-h2, h3{
+h2,
+h3 {
   font-family: "Chivo";
   text-align: center;
 }
 
-h2{
-font-family: "Chivo";
+h2 {
+  font-family: "Chivo";
   text-align: center;
   font-size: 0.9rem;
 }
@@ -27,12 +26,12 @@ font-family: "Chivo";
   font-size: 0.8rem;
 } */
 
-.text-full-shadow{
-  text-shadow:0px 0px 10px rgb(0, 0, 0) ;
+.text-full-shadow {
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
-.text-full-ilumination{
-  text-shadow:0px 0px 10px rgb(255, 255, 255) ;
+.text-full-ilumination {
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
 }
 
 @layer components {
@@ -50,37 +49,35 @@ font-family: "Chivo";
     transform: scale(1.05);
     cursor: pointer;
   }
-  
+
   .btn-magic:active {
     background-color: #575636;
     transform: scale(1);
   }
 }
 
-@theme{
+@theme {
   /* --background: #ffffff; */
 
-  --font-spirax: 'Spirax';
-  --font-chivo: 'Chivo';
-  --font-Laila: 'Laila';  
+  --font-spirax: "Spirax";
+  --font-chivo: "Chivo";
+  --font-Laila: "Laila";
 
-  --color-primary:#9dad2c;
-  --color-middle:#18370f;
-  --color-secondary:#65643E;
-  --color-neutral:#F9F9DC;
-  --color-background:#193B19;
-  --color-container:rgba(101, 100, 62, 0.5);
-  --color-gold-shadow:#6F5926;
-  --color-gold:#FFDA88;
-  --shadow-goldaura: 0px 0px 20px 0px #FFDA88,
-  inset 0px 0px 15px 0px #FFDA88 ;
---shadow-whiteaura: 0 0 15px 2px rgba(255, 255, 255, 0.7), 
-                      0 0 5px 1px rgba(255, 255, 255, 1);
+  --color-primary: #9dad2c;
+  --color-middle: #18370f;
+  --color-secondary: #65643e;
+  --color-neutral: #f9f9dc;
+  --color-background: #193b19;
+  --color-container: rgba(101, 100, 62, 0.5);
+  --color-gold-shadow: #6f5926;
+  --color-gold: #ffda88;
+  --shadow-goldaura: 0px 0px 20px 0px #ffda88, inset 0px 0px 15px 0px #ffda88;
+  --shadow-whiteaura: 0 0 15px 2px rgba(255, 255, 255, 0.7), 0 0 5px 1px rgba(255, 255, 255, 1);
 }
 
-
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {

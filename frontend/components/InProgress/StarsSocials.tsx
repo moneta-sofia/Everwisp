@@ -34,9 +34,7 @@ export default function StarsSocials() {
                 }}
               >
                 <Image src={star} alt="star" fill className="object-contain" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  {s.icon}
-                </div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">{s.icon}</div>
               </a>
             ))}
           </div>
@@ -56,9 +54,7 @@ export default function StarsSocials() {
                 }}
               >
                 <Image src={star} alt="star" fill className="object-contain" />
-                <div className="absolute inset-0 flex items-center justify-center w-auto h-auto">
-                  {s.icon}
-                </div>
+                <div className="absolute inset-0 flex items-center justify-center w-auto h-auto">{s.icon}</div>
               </a>
             ))}
           </div>
@@ -76,9 +72,7 @@ export default function StarsSocials() {
                 }}
               >
                 <Image src={star} alt="star" fill className="object-contain" />
-                <div className="absolute inset-0 flex items-center justify-center w-auto h-auto">
-                  {s.icon}
-                </div>
+                <div className="absolute inset-0 flex items-center justify-center w-auto h-auto">{s.icon}</div>
               </a>
             ))}
           </div>
