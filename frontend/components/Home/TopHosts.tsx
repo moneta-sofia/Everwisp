@@ -36,7 +36,7 @@ const rankStyles = [
 
 export default function TopHosts() {
   return (
-    <section className="flex justify-center items-center flex-col bg-background md:min-h-screen md:h-auto h-auto pt-18 text-full-ilumination w-full">
+    <section className="flex justify-center items-center flex-col bg-background h-auto pt-18 text-full-ilumination w-full">
       <div className="flex justify-between items-center my-12 w-10/12 container">
         <div className="w-2/3 rotate-180 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
           <div className="aguja w-full" />
@@ -67,7 +67,7 @@ export default function TopHosts() {
               <p className={` ${rankStyles[i].title} font-Laila font-semibold`}>{host.userData.name}</p>
               <p className={` ${rankStyles[i].description}`}>{host.presentation.shortDescription}</p>
               <div>
-                <Image src={"/Line.svg"} alt="" width={400} height={10} />
+                <Image src={"/Line.svg"} alt="" width={400}  sizes="(max-width: 768px)" height={10} />
                 <p className={` ${rankStyles[i].hours} font-chivo font-light pt-3`}>{host.stats.hoursStream} HOURS</p>
               </div>
             </DecoratedFrame>

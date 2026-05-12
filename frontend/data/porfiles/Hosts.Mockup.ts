@@ -48,7 +48,7 @@ export const hostsMock = [
       porfilePicture: "/images/avatar-kael.png",
       status: "offline",
       country: "US",
-      languaje: "ENG",
+      languaje: "EN",
     },
 
     presentation: {
@@ -165,7 +165,7 @@ export const hostsMock = [
       porfilePicture: "/images/avatar-echo.png",
       status: "online",
       country: "CA",
-      languaje: "ENG",
+      languaje: "EN",
     },
 
     presentation: {
@@ -282,7 +282,7 @@ export const hostsMock = [
       porfilePicture: "/images/avatar-onyx.png",
       status: "offline",
       country: "DE",
-      languaje: "ENG",
+      languaje: "EN",
     },
 
     presentation: {
@@ -360,7 +360,7 @@ export const hostsMock = [
       porfilePicture: "/images/avatar-blitz.png",
       status: "offline",
       country: "US",
-      languaje: "ENG",
+      languaje: "EN",
     },
 
     presentation: {

@@ -13,18 +13,8 @@ h1 {
 }
 h2,
 h3 {
-  font-family: "Chivo";
   text-align: center;
 }
-
-h2 {
-  font-family: "Chivo";
-  text-align: center;
-  font-size: 0.9rem;
-}
-/* h3{
-  font-size: 0.8rem;
-} */
 
 .text-full-shadow {
   text-shadow: 0px 0px 10px rgb(0, 0, 0);
@@ -32,6 +22,12 @@ h2 {
 
 .text-full-ilumination {
   text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.dual-aura{
+  box-shadow:
+  0 0 20px rgba(255, 220, 120, 0.5),
+  inset 0 0 20px rgba(255, 220, 120, 0.5);
 }
 
 @layer components {

@@ -9,7 +9,7 @@ export const topHostsMock = [
       porfilePicture: "/images/avatar-vanta.png",
       status: "online",
       country: "US",
-      languaje: "ENG",
+      languaje: "EN",
     },
 
     presentation: {

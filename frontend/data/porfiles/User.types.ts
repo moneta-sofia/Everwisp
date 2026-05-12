@@ -1,6 +1,6 @@
 export type UserState = "online" | "offline";
 export type Genre = "Male" | "Female" | "NoBinary" | "Other";
-export type Languaje = "ES" | "ENG" | "PT" | "FR";
+export type Languaje = "ES" | "EN" | "PT" | "FR";
 export type Role = "ADMIN" | "HOST" | "NORMAL" | "MOD";
 
 export interface UserPorfile {
