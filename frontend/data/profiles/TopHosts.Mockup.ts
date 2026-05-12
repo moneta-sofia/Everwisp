@@ -1,4 +1,4 @@
-import type { UserPorfile } from "./User.types";
+import type { UserProfile } from "./User.types";
 
 export const topHostsMock = [
   {
@@ -6,10 +6,10 @@ export const topHostsMock = [
       id: "vanta",
       name: "Vanta",
       role: "HOST",
-      porfilePicture: "/images/avatar-vanta.png",
+      profilePicture: "/images/avatar-vanta.png",
       status: "online",
       country: "US",
-      languaje: "EN",
+      language: "EN",
     },
 
     presentation: {
@@ -65,10 +65,10 @@ export const topHostsMock = [
       id: "sauloko",
       name: "Sauloko",
       role: "HOST",
-      porfilePicture: "/images/avatar-sauloko.png",
+      profilePicture: "/images/avatar-sauloko.png",
       status: "online",
       country: "BR",
-      languaje: "PT",
+      language: "PT",
     },
 
     presentation: {
@@ -124,10 +124,10 @@ export const topHostsMock = [
       id: "mora",
       name: "Mora",
       role: "HOST",
-      porfilePicture: "/images/avatar-mora.png",
+      profilePicture: "/images/avatar-mora.png",
       status: "online",
       country: "AR",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -177,4 +177,4 @@ export const topHostsMock = [
       playfriends: "",
     },
   },
-] satisfies UserPorfile[];
+] satisfies UserProfile[];

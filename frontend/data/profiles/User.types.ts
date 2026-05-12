@@ -1,17 +1,17 @@
 export type UserState = "online" | "offline";
 export type Genre = "Male" | "Female" | "NoBinary" | "Other";
-export type Languaje = "ES" | "EN" | "PT" | "FR";
+export type Language = "ES" | "EN" | "PT" | "FR";
 export type Role = "ADMIN" | "HOST" | "NORMAL" | "MOD";
 
-export interface UserPorfile {
+export interface UserProfile {
   userData: {
     id: string;
     name: string;
     role: Role;
-    porfilePicture: string | null;
+    profilePicture: string | null;
     status: UserState;
     country: string;
-    languaje: Languaje;
+    language: Language;
   };
 
   presentation: {

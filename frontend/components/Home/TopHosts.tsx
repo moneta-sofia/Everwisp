@@ -1,4 +1,4 @@
-import { topHostsMock } from "@/data/porfiles/TopHosts.Mockup";
+import { topHostsMock } from "@/data/profiles/TopHosts.Mockup";
 import Image from "next/image";
 import DecoratedFrame from "@/components/ui/DecoratedFrame";
 import RankBadge from "@/components/ui/RankBadge";
@@ -58,7 +58,7 @@ export default function TopHosts() {
             >
               <RankBadge rank={(i + 1) as 1 | 2 | 3} />
               <Image
-                src={"/test/porfilePicture.webp"}
+                src={"/test/profilePicture.webp"}
                 alt="asd"
                 width={rankStyles[i].imageW}
                 height={rankStyles[i].imageH}

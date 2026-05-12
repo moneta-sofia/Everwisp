@@ -1,4 +1,4 @@
-import type { UserPorfile } from "./User.types";
+import type { UserProfile } from "./User.types";
 
 export const hostsMock = [
   {
@@ -6,10 +6,10 @@ export const hostsMock = [
       id: "nyra",
       name: "Nyra",
       role: "HOST",
-      porfilePicture: "/images/avatar-nyra.png",
+      profilePicture: "/images/avatar-nyra.png",
       status: "online",
       country: "AR",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -45,10 +45,10 @@ export const hostsMock = [
       id: "kael",
       name: "Kael",
       role: "HOST",
-      porfilePicture: "/images/avatar-kael.png",
+      profilePicture: "/images/avatar-kael.png",
       status: "offline",
       country: "US",
-      languaje: "EN",
+      language: "EN",
     },
 
     presentation: {
@@ -84,10 +84,10 @@ export const hostsMock = [
       id: "luna",
       name: "Luna",
       role: "HOST",
-      porfilePicture: "/images/avatar-luna.png",
+      profilePicture: "/images/avatar-luna.png",
       status: "online",
       country: "MX",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -123,10 +123,10 @@ export const hostsMock = [
       id: "astra",
       name: "Astra",
       role: "HOST",
-      porfilePicture: "/images/avatar-astra.png",
+      profilePicture: "/images/avatar-astra.png",
       status: "online",
       country: "CL",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -162,10 +162,10 @@ export const hostsMock = [
       id: "echo",
       name: "Echo",
       role: "HOST",
-      porfilePicture: "/images/avatar-echo.png",
+      profilePicture: "/images/avatar-echo.png",
       status: "online",
       country: "CA",
-      languaje: "EN",
+      language: "EN",
     },
 
     presentation: {
@@ -201,10 +201,10 @@ export const hostsMock = [
       id: "iris",
       name: "Iris",
       role: "HOST",
-      porfilePicture: "/images/avatar-iris.png",
+      profilePicture: "/images/avatar-iris.png",
       status: "offline",
       country: "FR",
-      languaje: "FR",
+      language: "FR",
     },
 
     presentation: {
@@ -240,10 +240,10 @@ export const hostsMock = [
       id: "nova",
       name: "Nova",
       role: "HOST",
-      porfilePicture: "/images/avatar-nova.png",
+      profilePicture: "/images/avatar-nova.png",
       status: "online",
       country: "BR",
-      languaje: "PT",
+      language: "PT",
     },
 
     presentation: {
@@ -279,10 +279,10 @@ export const hostsMock = [
       id: "onyx",
       name: "Onyx",
       role: "HOST",
-      porfilePicture: "/images/avatar-onyx.png",
+      profilePicture: "/images/avatar-onyx.png",
       status: "offline",
       country: "DE",
-      languaje: "EN",
+      language: "EN",
     },
 
     presentation: {
@@ -318,10 +318,10 @@ export const hostsMock = [
       id: "aria",
       name: "Aria",
       role: "HOST",
-      porfilePicture: "/images/avatar-aria.png",
+      profilePicture: "/images/avatar-aria.png",
       status: "online",
       country: "AR",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -357,10 +357,10 @@ export const hostsMock = [
       id: "blitz",
       name: "Blitz",
       role: "HOST",
-      porfilePicture: "/images/avatar-blitz.png",
+      profilePicture: "/images/avatar-blitz.png",
       status: "offline",
       country: "US",
-      languaje: "EN",
+      language: "EN",
     },
 
     presentation: {
@@ -396,10 +396,10 @@ export const hostsMock = [
       id: "selene",
       name: "Selene",
       role: "HOST",
-      porfilePicture: "/images/avatar-selene.png",
+      profilePicture: "/images/avatar-selene.png",
       status: "online",
       country: "ES",
-      languaje: "ES",
+      language: "ES",
     },
 
     presentation: {
@@ -429,4 +429,4 @@ export const hostsMock = [
       playfriends: "",
     },
   },
-] satisfies UserPorfile[];
+] satisfies UserProfile[];

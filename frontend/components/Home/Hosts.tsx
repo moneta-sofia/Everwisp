@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { hostsMock } from "@/data/porfiles/Hosts.Mockup";
+import { hostsMock } from "@/data/profiles/Hosts.Mockup";
 import DecoratedFrame from "@/components/ui/DecoratedFrame";
 import { FaPlay } from "react-icons/fa";
 import { star } from "@/utils/frame";
@@ -82,13 +82,13 @@ export default function Hosts() {
               <div className="w-full flex justify-between">
                 {/* Avatar */}
                 <div className="relative">
-                  <Image src={"/test/porfilePicture.webp"} alt="asd" width={110} height={110} className="relative -mt-1" />
+                  <Image src={"/test/profilePicture.webp"} alt="asd" width={110} height={110} className="relative -mt-1" />
                 </div>
 
                 <div className="flex flex-col justify-center items-center text-sm">
                   <h2 className="text-4xl font-spirax font-light ">{host.userData.name}</h2>
                   <div className="flex justify-center items-center py-3 gap-3">
-                    <p  className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">{host.userData.languaje}</p>
+                    <p  className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">{host.userData.language}</p>
                     <div className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">
                       <ReactCountryFlag countryCode={host.userData.country} svg/>
                     </div>
