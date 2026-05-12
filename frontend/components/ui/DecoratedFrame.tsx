@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactNode;
   color?: "gold" | "silver" | "bronze";
   className?: string;
-  containerType?: "wide" | "large"
+  size?: "compact" | "full";
 };
 
 const colorStyles = {
@@ -28,9 +28,7 @@ const colorStyles = {
   },
 };
 
-
-
-export default function DecoratedFrame({ children, color = "gold", className = "" , containerType }: Props) {
+export default function DecoratedFrame({ children, color = "gold", className = "", size }: Props) {
   const style = colorStyles[color];
 
   return (
@@ -63,9 +61,19 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       />
 
       <Image
-        src={glitter} alt="" width={ containerType? 250 : 500} height={1500} className={`absolute -bottom-5 rotate-180 pointer-events-none ${style.filter}`}
+        src={glitter}
+        alt=""
+        width={size ? 250 : 500}
+        height={1500}
+        className={`absolute -bottom-5 rotate-180 pointer-events-none ${style.filter}`}
       />
-      <Image src={glitter} alt="" width={ containerType? 250 : 500} height={1500} className={`absolute -top-5  pointer-events-none ${style.filter}`} />
+      <Image
+        src={glitter}
+        alt=""
+        width={size ? 250 : 500}
+        height={1500}
+        className={`absolute -top-5  pointer-events-none ${style.filter}`}
+      />
       {children}
     </div>
   );

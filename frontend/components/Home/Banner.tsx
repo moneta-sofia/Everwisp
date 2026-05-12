@@ -79,7 +79,7 @@ export default function Banner() {
 
   return (
     <>
-      <div className=" bg-red-600 w-full h-[90vh] justify-center items-center relative">
+      <div className=" w-full h-[90vh] justify-center items-center relative">
         <div className="absolute -bottom-2 left-0 w-full h-26 overflow-hidden pointer-events-none">
           <div className="absolute -left-4 -right-4 bottom-0 h-full bg-linear-to-t from-background from-5% to-90% to-transparent blur-xs" />
         </div>
@@ -89,7 +89,7 @@ export default function Banner() {
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerLeave}
           onPointerLeave={handlePointerLeave}
-          className={`w-full h-full flex justify-center items-center bg-yellow-300 z-10 transition-all select-none touch-pan-y ${
+          className={`w-full h-full flex justify-center items-center z-10 transition-all select-none touch-pan-y ${
             dragging ? "cursor-grabbing" : "cursor-grab"
           }`}
         >

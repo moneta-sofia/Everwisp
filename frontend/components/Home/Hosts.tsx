@@ -35,27 +35,33 @@ export default function Hosts() {
 
   return (
     <section className="flex justify-center items-center flex-col w-full py-12 bg-background text-full-ilumination">
-            <div className="flex justify-between items-center my-12 w-10/12 container">
-              <div className="w-2/3 rotate-180 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
-                <div className="aguja w-full" />
-              </div>
-              <Image src={star} width={50} height={50} alt="star" className="mx-10 md:flex hidden" />
-              <h1 className="w-full">HOSTS</h1>
-              <Image src={star} width={50} height={50} alt="star" className="mx-10  md:flex hidden" />
-              <div className="w-2/3 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
-                <div className="aguja w-full" />
-              </div>
-            </div>
+      <div className="flex justify-between items-center my-12 w-10/12 container">
+        <div className="w-2/3 rotate-180 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
+          <div className="aguja w-full" />
+        </div>
+        <Image src={star} width={50} height={50} alt="star" className="mx-10 md:flex hidden" />
+        <h1 className="w-full">HOSTS</h1>
+        <Image src={star} width={50} height={50} alt="star" className="mx-10  md:flex hidden" />
+        <div className="w-2/3 filter-[drop-shadow(0_0_6px_white)]  md:flex hidden">
+          <div className="aguja w-full" />
+        </div>
+      </div>
       {/* Filter */}
       <div className="w-full flex justify-center mb-14">
         <div className="flex items-center justify-center gap-5 flex-wrap">
           <span className="text-zinc-200 text-lg">Ordenar por:</span>
 
-          <button onClick={() => setFilter("popular")} className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("popular")}`}>
+          <button
+            onClick={() => setFilter("popular")}
+            className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("popular")}`}
+          >
             Popular
           </button>
 
-          <button onClick={() => setFilter("offline")} className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("offline")}`}>
+          <button
+            onClick={() => setFilter("offline")}
+            className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("offline")}`}
+          >
             Offline
           </button>
 
@@ -63,7 +69,10 @@ export default function Hosts() {
             Todos
           </button>
 
-          <button onClick={() => setFilter("online")} className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("online")}`}>
+          <button
+            onClick={() => setFilter("online")}
+            className={`px-6 py-2 rounded-xl transition-all cursor-pointer ${buttonStyle("online")}`}
+          >
             En línea
           </button>
         </div>
@@ -74,7 +83,7 @@ export default function Hosts() {
         {filteredHosts.map((host) => {
           return (
             <DecoratedFrame
-              containerType='wide'
+              size="full"
               key={host.userData.id}
               color="gold"
               className="relative w-full max-w-[390px] h-[230px] px-8 py-5 flex items-center justify-between flex-col bg-container border-[0.5px] border-amber-100 btn-magic "
@@ -88,9 +97,9 @@ export default function Hosts() {
                 <div className="flex flex-col justify-center items-center text-sm">
                   <h2 className="text-4xl font-spirax font-light ">{host.userData.name}</h2>
                   <div className="flex justify-center items-center py-3 gap-3">
-                    <p  className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">{host.userData.language}</p>
+                    <p className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">{host.userData.language}</p>
                     <div className="border rounded-lg w-7 h-6 flex justify-center items-center dual-aura">
-                      <ReactCountryFlag countryCode={host.userData.country} svg/>
+                      <ReactCountryFlag countryCode={host.userData.country} svg />
                     </div>
                   </div>
                 </div>
@@ -99,7 +108,7 @@ export default function Hosts() {
               <div className="flex justify-center items-center">
                 <div>
                   <p className="italic text-sm mt-3 text-zinc-200">{host.presentation.shortDescription}</p>
-                  <Image src={"/Line.svg"} alt="" width={400} height={10} className="py-2 pr-8"/>
+                  <Image src={"/Line.svg"} alt="" width={400} height={10} className="py-2 pr-8" />
                   <div className="flex items-center justify-start gap-2">
                     <span
                       className={` w-3 h-3 rounded-full 
@@ -110,7 +119,7 @@ export default function Hosts() {
                   </div>
                 </div>
                 <button className="w-20 h-14 rounded-full border-2 text-2xl border-amber-200 flex items-center justify-center dual-aura">
-                  <FaPlay className="-mr-1"/>
+                  <FaPlay className="-mr-1" />
                 </button>
               </div>
             </DecoratedFrame>

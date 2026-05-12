@@ -2,16 +2,15 @@ export default function LightBeams() {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <div
-  className="
+        className="
     absolute
     inset-0
     blur-3xl
     opacity-30
   "
-  style={{
-    background:
-      "radial-gradient(circle at 50% 20%, rgba(225, 192, 59, 0.71), transparent 60%)",
-  }}
+        style={{
+          background: "radial-gradient(circle at 50% 20%, rgba(225, 192, 59, 0.71), transparent 60%)",
+        }}
       />
 
       <div

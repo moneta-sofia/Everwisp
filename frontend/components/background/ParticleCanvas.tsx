@@ -56,14 +56,7 @@ export default function ParticleCanvas() {
     const drawParticle = (p: Particle) => {
       ctx.beginPath();
 
-      const gradient = ctx.createRadialGradient(
-        p.x,
-        p.y,
-        0,
-        p.x,
-        p.y,
-        p.blur
-      );
+      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.blur);
 
       gradient.addColorStop(0, `rgba(255, 245, 200, ${p.alpha})`);
 

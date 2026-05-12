@@ -1,0 +1,23 @@
+@theme {
+  --font-spirax: "Spirax";
+  --font-chivo: "Chivo";
+  --font-Laila: "Laila";
+
+  --color-primary: #9dad2c;
+  --color-middle: #18370f;
+  --color-secondary: #65643e;
+  --color-neutral: #f9f9dc;
+  --color-background: #193b19;
+  --color-container: rgba(101, 100, 62, 0.5);
+
+  --color-gold-shadow: #6f5926;
+  --color-gold: #ffda88;
+
+  --shadow-goldaura:
+    0px 0px 20px 0px #ffda88,
+    inset 0px 0px 15px 0px #ffda88;
+
+  --shadow-whiteaura:
+    0 0 15px 2px rgba(255,255,255,.7),
+    0 0 5px 1px rgba(255,255,255,1);
+}

@@ -1,0 +1,12 @@
+h1 {
+  font-family: "Spirax";
+  text-align: center;
+  color: var(--color-neutral);
+  font-size: 4rem;
+  line-height: 1;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
