@@ -14,13 +14,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`$ h-full antialiased`}>
-      <body  className={`
+      <body
+        className={`
         ${spirax.variable}
         ${chivo.variable}
         ${laila.variable}
         h-full
         antialiased
-      `}>
+      `}
+      >
         {children}
       </body>
     </html>
