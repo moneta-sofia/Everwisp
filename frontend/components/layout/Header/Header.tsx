@@ -17,8 +17,8 @@ export default function Header() {
         />
         <Image
           src="/logo-large.webp"
-          width={200}
-          height={180}
+          width={140}
+          height={140}
           alt="Logo"
           className="gold-aura hidden min-[1224px]:block"
           style={{ width: "auto", height: "auto" }}
