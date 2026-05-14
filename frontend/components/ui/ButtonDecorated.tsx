@@ -14,10 +14,10 @@ export default function ButtonDecorated({ buttonText, link }: Props) {
       className="relative mb-10 font-spirax text-3xl font-medium shadow-goldaura-inset shadow-goldaura btn-magic pointer-events-auto"
       href={link}
     >
-      <Image src={tl} height={75} width={75} alt="frame" className="absolute -top-2 -left-2" style={frameImageStyle} />
-      <Image src={tr} height={75} width={75} alt="frame" className="absolute -top-1 -right-2" style={frameImageStyle} />
-      <Image src={br} height={75} width={75} alt="frame" className="absolute -bottom-1 -right-2" style={frameImageStyle} />
-      <Image src={bl} height={75} width={75} alt="frame" className="absolute -bottom-1 -left-2" style={frameImageStyle} />
+      <Image src={tl} height={10} width={10} alt="frame" className="absolute -top-2 -left-2" style={frameImageStyle} />
+      <Image src={tr} height={10} width={10} alt="frame" className="absolute -top-1 -right-2" style={frameImageStyle} />
+      <Image src={br} height={10} width={10} alt="frame" className="absolute -bottom-1 -right-2" style={frameImageStyle} />
+      <Image src={bl} height={10} width={10} alt="frame" className="absolute -bottom-1 -left-2" style={frameImageStyle} />
       {buttonText}
     </Link>
   );

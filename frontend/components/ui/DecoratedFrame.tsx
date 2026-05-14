@@ -46,9 +46,9 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={tl}
         alt=""
-        width={100}
-        height={100}
-        className={`absolute -top-3 -left-3 pointer-events-none ${style.filter}`}
+        width={75}
+        height={75}
+        className={`absolute -top-4 -left-3 pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
 
@@ -56,8 +56,8 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={tr}
         alt=""
-        width={100}
-        height={100}
+        width={75}
+        height={75}
         className={`absolute -top-2 -right-[0.45rem] pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
@@ -66,9 +66,9 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={bl}
         alt=""
-        width={100}
-        height={100}
-        className={`absolute -bottom-1 -left-2 pointer-events-none ${style.filter}`}
+        width={75}
+        height={75}
+        className={`absolute -bottom-1 -left-[0.65rem] pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
 
@@ -76,9 +76,9 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={br}
         alt=""
-        width={100}
-        height={100}
-        className={`absolute -bottom-2 -right-[0.61rem] pointer-events-none ${style.filter}`}
+        width={75}
+        height={75}
+        className={`absolute -bottom-[0.65rem] -right-[0.7rem] pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
 
@@ -86,9 +86,9 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={glitter}
         alt=""
-        width={size ? 250 : 500}
+        width={450}
         height={1500}
-        className={`absolute -bottom-5 rotate-180 pointer-events-none ${style.filter}`}
+        className={`absolute ${size == "full" ? '-bottom-[1.45rem]' : '-bottom-5'}  rotate-180 pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
 
@@ -96,9 +96,9 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       <Image
         src={glitter}
         alt=""
-        width={size ? 250 : 500}
+        width={250}
         height={1500}
-        className={`absolute -top-5 pointer-events-none ${style.filter}`}
+        className={`absolute -top-6 pointer-events-none ${style.filter}`}
         style={{ width: "auto", height: "auto" }}
       />
 
