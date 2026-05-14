@@ -4,14 +4,14 @@ import { MdMusicNote, MdMusicOff } from "react-icons/md";
 
 export default function MusicButton() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [muted, setMuted] = useState(true);
+  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     const audio = new Audio("/test/audio-test.mp3");
 
     audio.loop = true;
     audio.volume = 0.4;
-    audio.muted = true;
+    audio.muted = false;
 
     audioRef.current = audio;
 

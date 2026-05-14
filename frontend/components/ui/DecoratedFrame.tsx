@@ -43,13 +43,34 @@ export default function DecoratedFrame({ children, color = "gold", className = "
       `}
     >
       {/* TOP LEFT */}
-      <Image src={tl} alt="" width={100} height={100} className={`absolute -top-3 -left-3 pointer-events-none ${style.filter}`} />
+      <Image
+        src={tl}
+        alt=""
+        width={100}
+        height={100}
+        className={`absolute -top-3 -left-3 pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
+      />
 
       {/* TOP RIGHT */}
-      <Image src={tr} alt="" width={100} height={100} className={`absolute -top-2 -right-[0.45rem] pointer-events-none ${style.filter}`} />
+      <Image
+        src={tr}
+        alt=""
+        width={100}
+        height={100}
+        className={`absolute -top-2 -right-[0.45rem] pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
+      />
 
       {/* BOTTOM LEFT */}
-      <Image src={bl} alt="" width={100} height={100} className={`absolute -bottom-1 -left-2 pointer-events-none ${style.filter}`} />
+      <Image
+        src={bl}
+        alt=""
+        width={100}
+        height={100}
+        className={`absolute -bottom-1 -left-2 pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
+      />
 
       {/* BOTTOM RIGHT */}
       <Image
@@ -58,22 +79,29 @@ export default function DecoratedFrame({ children, color = "gold", className = "
         width={100}
         height={100}
         className={`absolute -bottom-2 -right-[0.61rem] pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
       />
 
+      {/* GLITTER BOTTOM */}
       <Image
         src={glitter}
         alt=""
         width={size ? 250 : 500}
         height={1500}
         className={`absolute -bottom-5 rotate-180 pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
       />
+
+      {/* GLITTER TOP */}
       <Image
         src={glitter}
         alt=""
         width={size ? 250 : 500}
         height={1500}
-        className={`absolute -top-5  pointer-events-none ${style.filter}`}
+        className={`absolute -top-5 pointer-events-none ${style.filter}`}
+        style={{ width: "auto", height: "auto" }}
       />
+
       {children}
     </div>
   );
