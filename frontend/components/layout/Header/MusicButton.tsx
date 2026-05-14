@@ -42,7 +42,7 @@ export default function MusicButton() {
   return (
     <button
       onClick={toggleMute}
-      className="h-full w-auto p-3 bg-background text-neutral cursor-pointer rounded-full border-[1.5px] border-neutral white-aura"
+      className="h-full w-auto md:p-3 p-2 bg-background text-neutral cursor-pointer rounded-full border-[1.5px] border-neutral white-aura"
     >
       {muted ? <MdMusicOff size={25} className="white-aura" /> : <MdMusicNote size={25} className="white-aura" />}
     </button>

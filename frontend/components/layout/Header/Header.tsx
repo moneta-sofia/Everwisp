@@ -8,8 +8,8 @@ export default function Header() {
       <Link href={"./"}>
         <Image
           src="/logo.webp"
-          width={90}
-          height={180}
+          width={50}
+          height={50}
           alt="Logo"
           className="gold-aura min-[1224px]:hidden"
           style={{ width: "auto", height: "auto" }}
