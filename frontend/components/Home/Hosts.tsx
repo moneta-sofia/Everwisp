@@ -86,7 +86,7 @@ export default function Hosts() {
               size="full"
               key={host.userData.id}
               color="gold"
-              className="relative w-full max-w-[390px] h-[230px] px-8 py-5 flex items-center justify-between flex-col bg-container border-[0.5px] border-amber-100 btn-magic "
+              className="relative w-full max-w-[95vw] sm:max-w-[390px] h-[230px] px-6 sm:px-8 py-5 flex items-center justify-between flex-col bg-container border-[0.5px] border-amber-100 btn-magic "
             >
               <div className="w-full flex justify-between">
                 {/* Avatar */}
@@ -108,7 +108,7 @@ export default function Hosts() {
               <div className="flex justify-center items-center">
                 <div>
                   <p className="italic text-sm mt-3 text-zinc-200">{host.presentation.shortDescription}</p>
-                  <Image src={"/Line.svg"} alt="" width={400} height={10} className="py-2 pr-8" />
+                  <Image src={"/Line.svg"} alt="" width={200} height={10} className="py-2 pr-4 sm:pr-8 sm:w-[400px] w-[200px]" />
                   <div className="flex items-center justify-start gap-2">
                     <span
                       className={` w-3 h-3 rounded-full 
